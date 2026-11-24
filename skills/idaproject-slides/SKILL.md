@@ -11,10 +11,23 @@ This skill turns any brief into a deck that reads and looks like IdaProject's ow
 
 You only need two kinds of reference material:
 
-- **The slide template**: Figma Slides file `yRNgBdeFmQR59BYGiiiDJL` («ИдаПроджект шаблоны»). It holds 50 layouts in a light row and a dark row, the colour and type variables, and the header and footer components.
-- **Finished decks**: Figma file `Xq7u4weQ5eKXuHdK0uqFYT` («Презентации · Мероприятия»), one deck per page. Before you design, list its pages and look at the three or four most recent decks. Treat what they do as the current style. Where the template and recent decks disagree, follow the recent decks, because the template is the older corporate base.
+- **The slide template** «ИдаПроджект шаблоны»: https://www.figma.com/slides/yRNgBdeFmQR59BYGiiiDJL (fileKey `yRNgBdeFmQR59BYGiiiDJL`, Figma Slides). It holds 50 layouts in a light row and a dark row, the colour and type variables, and the header and footer components.
+- **Finished decks** «Презентации · Мероприятия»: https://www.figma.com/design/Xq7u4weQ5eKXuHdK0uqFYT (fileKey `Xq7u4weQ5eKXuHdK0uqFYT`), one deck per page. Before you design, list its pages and look at the three or four most recent decks. Treat what they do as the current style. Where the template and recent decks disagree, follow the recent decks, because the template is the older corporate base.
 
 When you need a layout, find a slide in those decks that solves the same problem and clone it. Do this before drawing from scratch. Cloning keeps the header, footer, background and spacing exact for free.
+
+### How you get access
+
+These are private company files, so the skill can't ship them. You reach them live through the **Figma MCP server**. It acts with the Figma account of the person you are working for, which means you can see exactly what they can see.
+
+1. **Check the connection.** Call Figma's `whoami`. If the Figma tools are missing or not authenticated, tell the user in Russian that the Figma connector must be connected and signed in. In Claude Code that is `/mcp` or the connector settings; in other clients, their MCP settings.
+2. **Open a session** with `create_session` on the fileKey you need. Use a separate session for each file you read.
+3. **Read the template and decks:**
+   - `get_screenshot` on a node to see a layout.
+   - `use_figma` with read-only code to list pages and frames, and to read sizes, styles and variables.
+   - `get_metadata` works for the decks file (`/design/`) but not for the template (`/slides/`); use `use_figma` there.
+4. **If a file is not accessible** (403 or not found), the user's account has no access to it. Ask the user to request view access from the file owner, or to share the link with their account. Until then, work from [references/visual-system.md](references/visual-system.md) and [references/slide-types.md](references/slide-types.md), which capture the style. Say in the report that no live examples were checked.
+5. **Respect the boundaries.** The template and the finished decks are read-only references. Clone from them into the working file and never edit them. Write only to the file and page the user named for the new deck.
 
 ## Workflow
 
