@@ -52,7 +52,7 @@
 npx --yes github:cenya-ida/idaproject-presentations-skill
 ```
 
-По умолчанию скилл ставится в `./.claude/skills/idaproject-slides`, это папка проекта для Claude Code. Опции:
+По умолчанию скилл ставится в `./.claude/skills/idaproject-presentations-skill`, это папка проекта для Claude Code. Опции:
 
 | Опция | Куда ставится |
 |---|---|
@@ -72,13 +72,13 @@ npx --yes github:cenya-ida/idaproject-presentations-skill --global
 
 ### Способ 3. Вручную
 
-Скопируйте папку `skills/idaproject-slides` из репозитория в `.claude/skills/` или `.agents/skills/` вашего проекта.
+Скопируйте папку `skills/idaproject-presentations-skill` из репозитория в `.claude/skills/` или `.agents/skills/` вашего проекта.
 
 После установки откройте новую сессию агента: скиллы подхватываются только при старте сессии.
 
 ## Как пользоваться
 
-Вызовите скилл напрямую: `/idaproject-slides` в Claude Code или `$idaproject-slides` в Codex. Можно и просто описать задачу, тогда агент сам подключит скилл.
+Вызовите скилл напрямую: `/idaproject-presentations-skill` в Claude Code или `$idaproject-presentations-skill` в Codex. Можно и просто описать задачу, тогда агент сам подключит скилл.
 
 - «Собери презентацию по этому ТЗ, спикер — Иван Иванов, доклад на 40 минут»
 - «Вот сценарий выступления, сначала покажи план колоды»
@@ -101,12 +101,14 @@ npx --yes github:cenya-ida/idaproject-presentations-skill --global
 npx --yes github:cenya-ida/idaproject-presentations-skill --force
 ```
 
-Или попросите агента: «Обнови скилл idaproject-slides из репозитория». Локальные правки при этом перезапишутся.
+Или попросите агента: «Обнови скилл idaproject-presentations-skill из репозитория». Локальные правки при этом перезапишутся.
+
+Если вы ставили скилл раньше, когда он назывался `idaproject-slides`, удалите старую папку `.claude/skills/idaproject-slides` или `.agents/skills/idaproject-slides`. Иначе у агента окажутся две копии скилла.
 
 ## Состав репозитория
 
 ```
-skills/idaproject-slides/
+skills/idaproject-presentations-skill/
 ├── SKILL.md                    # порядок работы, принципы, планка качества
 └── references/
     ├── narrative.md            # логика и структура колоды

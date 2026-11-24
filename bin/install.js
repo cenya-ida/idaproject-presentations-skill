@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 'use strict';
 
-// Installs the idaproject-slides skill into a skills directory that an AI agent reads.
+// Installs the idaproject-presentations-skill skill into a skills directory that an AI agent reads.
 // Usage: npx github:cenya-ida/idaproject-presentations-skill [options]
 
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-const SKILL = 'idaproject-slides';
+const SKILL = 'idaproject-presentations-skill';
 const SOURCE = path.join(__dirname, '..', 'skills', SKILL);
 
 const HELP = `Install the ${SKILL} skill.

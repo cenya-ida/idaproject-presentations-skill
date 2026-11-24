@@ -1,5 +1,5 @@
 ---
-name: idaproject-slides
+name: idaproject-presentations-skill
 description: Build, rebuild or review presentation slides in the IdaProject (ИдаПроджект) house style — dark 1920×1080 Figma decks with a single neon accent, Aeonik Pro and JetBrains Mono on a 4-point type scale, flat cards and chips. Covers the whole path from a brief, script or speaker notes to a deck outline, the right slide type for every point, colour and type styles, the build in Figma, and a scored design review (composition, typography, perception, UI quality, clarity, brand) plus Nielsen's heuristics. Use this skill whenever someone asks for a talk, workshop, webinar, conference or sales deck for IdaProject, wants one slide redesigned "in our style", asks why a slide looks cluttered or weak, wants slides reviewed, or hands over a brief (ТЗ) or script to turn into slides — even if they don't say "IdaProject" but the work is in the company's Figma presentation files.
 ---
 
